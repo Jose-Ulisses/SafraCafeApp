@@ -26,9 +26,12 @@ import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.safracafe.ui.theme.SafraCafeTheme
-import com.example.safracafe.ui.theme.screens.Colheitas
-import com.example.safracafe.ui.theme.screens.Funcionarios
-import com.example.safracafe.ui.theme.screens.Lavouras
+import com.example.safracafe.screens.Colheitas
+import com.example.safracafe.screens.ColheitasNavigation
+import com.example.safracafe.screens.Funcionarios
+import com.example.safracafe.screens.FuncionariosNavigation
+import com.example.safracafe.screens.Lavouras
+import com.example.safracafe.screens.LavourasNavigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,9 +68,9 @@ fun SafraCafeApp() {
         }
     ){
         when (currentDestination) {
-            AppDestinations.COLHEITAS -> Colheitas()
-            AppDestinations.LAVOURAS -> Lavouras()
-            AppDestinations.FUNCIONARIOS -> Funcionarios()
+            AppDestinations.COLHEITAS -> ColheitasNavigation()
+            AppDestinations.LAVOURAS -> LavourasNavigation()
+            AppDestinations.FUNCIONARIOS -> FuncionariosNavigation()
         }
     }
 }
@@ -78,7 +81,7 @@ enum class AppDestinations(
 ) {
     COLHEITAS("Colheitas", Icons.Default.Add),
     LAVOURAS("Lavouras", Icons.Default.Place),
-    FUNCIONARIOS("Panhadores", Icons.Default.Face),
+    FUNCIONARIOS("Funcionarios", Icons.Default.Face),
 }
 
 @Composable

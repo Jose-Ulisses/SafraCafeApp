@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SafraCafe</string>
+    <string name="back">Voltar</string>
 </resources>
